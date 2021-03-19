@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+ - File              : index.html
+ - Author            : Teguh Satya <teguhsatyadhr@gmail.com>
+ - Date              : 19.03.2021
+ - Last Modified Date: 19.03.2021
+ - Last Modified By  : Teguh Satya <teguhsatyadhr@gmail.com>
+-->
+
+{% extends 'crud_app/base.html' %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class='mt-4'>🎹Music DB using PostgreSQL and Django</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table mt-2">
+          <thead>
+            <tr>
+              <th scope="col">Singer</th>
+              <th scope="col">Songs</th>
+              <th scope="col">Album</th>
+              <th scope="col">Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                {% for obj in object_list %}
+                  <td>{{obj.singer_name.musician_first_name}}</td>
+                  <td>{{obj.song_title}}</td>
+                  <td>{{obj.album_name}}</td>
+                  <td>{{obj.release_date}}</td>
+                {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+
+
