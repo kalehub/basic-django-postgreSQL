@@ -3,7 +3,7 @@
 # File              : settings.py
 # Author            : Teguh Satya <teguhsatyadhr@gmail.com>
 # Date              : 19.03.2021
-# Last Modified Date: 19.03.2021
+# Last Modified Date: 20.03.2021
 # Last Modified By  : Teguh Satya <teguhsatyadhr@gmail.com>
 """
 Django settings for music_crud_project project.

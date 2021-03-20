@@ -3,14 +3,60 @@
  - File              : update.html
  - Author            : Teguh Satya <teguhsatyadhr@gmail.com>
  - Date              : 19.03.2021
- - Last Modified Date: 19.03.2021
+ - Last Modified Date: 20.03.2021
  - Last Modified By  : Teguh Satya <teguhsatyadhr@gmail.com>
 -->
 
 {% extends 'crud_app/base.html' %}
 
-{% block content %}
-<h1>this is update page</h1>
-{% endblock %}
 
+{% block content %}
+<div class="row mt-4 mb-2">
+    <div class="col-sm-12">
+        <h1>📝 Music</h1>
+    </div>
+</div>
+<form action="" method='POST'>
+    {% csrf_token %}
+    <div class="row mt-4" id='singer-info' >
+        <h3>👩🏻‍💼 singer information : </h3>
+        <hr>
+        <div class="col-sm-12">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name='m_fname' id="floatingInput" placeholder="singer first name ">
+              <label for="floatingInput">First Name </label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name='m_lastname' id="floatingInput" placeholder="singer last name ">
+              <label for="floatingInput">Last Name</label>
+            </div>
+         </div>
+    </div>
+    <div class="row mt-4">
+        <h3>📝 Music information : </h3>
+        <hr>
+        <div class="col-sm-12">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name='s_title' id="floatingInput" placeholder="song title">
+              <label for="floatingInput">Song title </label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" name='s_album' id="floatingInput" placeholder="album title">
+              <label for="floatingInput">Album Title</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="date" class="form-control" name='s_date' id="floatingInput" placeholder="release date">
+              <label for="floatingInput">Release date </label>
+            </div>
+         </div>
+    </div>
+            <button class="btn btn-success col-sm-12" value='submit'>Add </button>
+</form>
+
+
+
+
+
+
+{% endblock %}
 
