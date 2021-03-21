@@ -3,7 +3,7 @@
  - File              : index.html
  - Author            : Teguh Satya <teguhsatyadhr@gmail.com>
  - Date              : 19.03.2021
- - Last Modified Date: 20.03.2021
+ - Last Modified Date: 21.03.2021
  - Last Modified By  : Teguh Satya <teguhsatyadhr@gmail.com>
 -->
 
@@ -43,6 +43,7 @@
                   <td>{{obj.album_name}}</td>
                   <td>{{obj.release_date}}</td>
                   <td>
+                      <a class="btn btn-warning btn-sm" href="{% url 'update' obj.id %}">update</a>
                       <form action="{% url 'delete' obj.id %}" method='POST'>
                           {% csrf_token %}
                           <button class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?');" type='submit'>delete</button>

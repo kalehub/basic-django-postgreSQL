@@ -3,7 +3,7 @@
 # File              : urls.py
 # Author            : Teguh Satya <teguhsatyadhr@gmail.com>
 # Date              : 19.03.2021
-# Last Modified Date: 20.03.2021
+# Last Modified Date: 21.03.2021
 # Last Modified By  : Teguh Satya <teguhsatyadhr@gmail.com>
 
 
@@ -13,9 +13,9 @@ from . import views
 urlpatterns = [
         path('', views.index, name='index'),
         path('add/', views.add, name='add'),
-        path('update/', views.update, name='update'),
+        path('update/<int:ar_id>', views.update, name='update'),
         path('del/<int:mid>', views.delete, name='delete'),
-        path('about/<int:ar_id>', views.about, name='about'),
+        path('about/', views.about, name='about'),
 ]
 
 
